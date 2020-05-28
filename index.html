@@ -3,24 +3,30 @@
     <head>
         <title>Library of Books</title>
         <link rel="stylesheet" href="styles/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+            When in doubt, go to the library
+        </header>
         <table>
         </table>
         <button id="toggleForm">Add Book</button>
         <section class="addBook">
-            Add New Book
-            <form>
-                Title<input type="text" id="bookTitle"><br>
-                Author<input type="text" id="bookAuthor"><br>
-                Pages<input type="number" id="bookPages"><br>
-                Read?<input type="radio" id="readTrue" name="readStatus" value="true">
-                <label for="readTrue">Yes</label>
+            <p id="title">Add New Book</p>
+            <form class="form-inline">
+                <label class="labels">Title</label><input type="text" id="bookTitle"><br>
+                <label class="labels">Author</label><input type="text" id="bookAuthor"><br>
+                <label class="labels">Pages</label><input type="number" id="bookPages"><br>
+                <label class="labels">Read?</label>
+                <label for="readTrue"><input type="radio" id="readTrue" name="readStatus" value="true">Yes</label>
                 <input type="radio" id="readFalse" name="readStatus" value="false">
-                <label for="readFalse">No</label>
-                <button id="addBookButton" type="button">Add Book</button>
+                <label for="readFalse" id="readFalseLabel">No</label>
             </form>
+            <button id="addBookButton" type="button">Add Book</button>
+            <button id="cancelAddBook">Cancel</button>
         </section>
+        <img src="images/output-onlinepngtools%20(1).png">
     </body>
     <script src="scripts/script.js"></script>
 </html>

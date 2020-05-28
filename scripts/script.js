@@ -39,7 +39,7 @@ function render(obj) {
     row.appendChild(toggleCell);
     let deleteCell = document.createElement("td");
     let deleteBtn = document.createElement("BUTTON");
-    deleteBtn.innerHTML = "x";
+    deleteBtn.innerHTML = "X";
     deleteBtn.setAttribute("class", "deleteButtons");
     deleteBtn.addEventListener("click", function() {
         let index = myLibrary.indexOf(obj);
@@ -53,6 +53,7 @@ function render(obj) {
 
 document.getElementById("addBookButton").addEventListener("click", function(){ addBookToLibrary(document.getElementById('bookTitle').value, document.getElementById('bookAuthor').value,  parseInt(document.getElementById('bookPages').value), document.getElementById('readTrue').checked? "Read" : "Not read" );
 document.querySelector(".addBook").style.visibility = "hidden";
+document.body.style.visibility = "visible";
 update();}
 );
 
@@ -65,6 +66,9 @@ function update() {
         let headerCell = document.createElement("th");
         let headerText = document.createTextNode(headerItems[i]);
         headerCell.appendChild(headerText);
+        if (i == 3) {
+        headerCell.setAttribute("colspan", "2")
+        };
         header.appendChild(headerCell);
     }
     table.appendChild(header);
@@ -75,4 +79,10 @@ function update() {
 
 document.getElementById("toggleForm").addEventListener("click", function(){
     document.querySelector(".addBook").style.visibility = "visible";
+    document.body.style.visibility = "hidden";
+})
+
+document.getElementById("cancelAddBook").addEventListener("click", function() {
+    document.querySelector(".addBook").style.visibility = "hidden";
+    document.body.style.visibility = "visible";
 })
