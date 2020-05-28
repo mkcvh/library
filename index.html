@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library of Books</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <table>
+        </table>
+        <button id="toggleForm">Add Book</button>
+        <section class="addBook">
+            Add New Book
+            <form>
+                Title<input type="text" id="bookTitle"><br>
+                Author<input type="text" id="bookAuthor"><br>
+                Pages<input type="number" id="bookPages"><br>
+                Read?<input type="radio" id="readTrue" name="readStatus" value="true">
+                <label for="readTrue">Yes</label>
+                <input type="radio" id="readFalse" name="readStatus" value="false">
+                <label for="readFalse">No</label>
+                <button id="addBookButton" type="button">Add Book</button>
+            </form>
+        </section>
+    </body>
+    <script src="scripts/script.js"></script>
+</html>
