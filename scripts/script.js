@@ -25,7 +25,7 @@ function render(obj) {
     }
     let toggleCell = document.createElement("td");
     let toggleBtn = document.createElement("BUTTON");
-    toggleBtn.innerHTML = obj.read == "Read"? "Not read" : "Read";
+    toggleBtn.innerHTML = obj.read == "Read"? "Not read?" : "Read?";
     toggleBtn.setAttribute("class", "toggleButtons");
     toggleBtn.addEventListener("click", function() {
         if (obj.read == "Not read") {
